@@ -1,0 +1,503 @@
+[25-Aug-2022 08:46:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 08:48:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/BaseCommand.php(65): Composer\Console\Application->getComposer(false, false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/BaseCommand.php(150): Composer\Command\BaseCommand->getComposer(false, false, false)
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(211): Composer\Command\BaseCommand->initialize(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#19 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#20 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:48:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:48:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:48:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:49:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/BaseCommand.php(65): Composer\Console\Application->getComposer(false, false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/BaseCommand.php(150): Composer\Command\BaseCommand->getComposer(false, false, false)
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(211): Composer\Command\BaseCommand->initialize(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#19 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#20 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:49:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:50:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:50:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:51:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:51:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:51:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:51:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:53:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:53:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:56:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(300): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(196): Symfony\Component\Process\Process->start(Array)
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(136): Symfony\Component\Process\Process->run(Array)
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(74): Composer\Util\ProcessExecutor->doExecute('git branch -a -...', '/home/globalmed...', false, NULL)
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(140): Composer\Util\ProcessExecutor->execute('git branch -a -...', NULL, '/home/globalmed...')
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Version/VersionGuesser.php(75): Composer\Package\Version\VersionGuesser->guessGitVersion(Array, '/home/globalmed...')
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Package/Loader/RootPackageLoader.php(91): Composer\Package\Version\VersionGuesser->guessVersion(Array, '/home/globalmed...')
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(403): Composer\Package\Loader\RootPackageLoader->load(Array, 'Composer\\Packag...', '/home/globalmed...')
+#8 phar:///opt/cpanel/composer/bin/composer/src/Composer/Factory.php(646): Composer\Factory->createComposer(Object(Composer\IO\ConsoleIO), Array, false, '/home/globalmed...', true, false)
+#9 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(445): Composer\Factory::create(Object(Composer\IO\ConsoleIO), NULL, false, false)
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(578): Composer\Console\Application->getComposer(false, false)
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(213): Composer\Console\Application->getPluginCommands()
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:56:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_get_status() in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php:1279
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(700): Symfony\Component\Process\Process->updateStatus(false)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(752): Symfony\Component\Process\Process->isRunning()
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php(167): Symfony\Component\Process\Process->stop(0)
+#3 [internal function]: Symfony\Component\Process\Process->__destruct()
+#4 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/process/Process.php on line 1279
+[25-Aug-2022 08:57:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 08:58:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 09:04:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 09:06:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/InstallCommand.php(139): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#14 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#15 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 09:07:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 09:15:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Composer\Util\escapeshellarg() in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php:483
+Stack trace:
+#0 phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php(435): Composer\Util\ProcessExecutor::escapeArgument('')
+#1 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(367): Composer\Util\ProcessExecutor::escape('')
+#2 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(291): Composer\EventDispatcher\EventDispatcher->getPhpExecCommand()
+#3 phar:///opt/cpanel/composer/bin/composer/src/Composer/EventDispatcher/EventDispatcher.php(119): Composer\EventDispatcher\EventDispatcher->doDispatch(Object(Composer\Script\Event))
+#4 phar:///opt/cpanel/composer/bin/composer/src/Composer/Autoload/AutoloadGenerator.php(434): Composer\EventDispatcher\EventDispatcher->dispatchScript('post-autoload-d...', true, Array, Array)
+#5 phar:///opt/cpanel/composer/bin/composer/src/Composer/Installer.php(341): Composer\Autoload\AutoloadGenerator->dump(Object(Composer\Config), Object(Composer\Repository\InstalledFilesystemRepository), Object(Composer\Package\RootPackage), Object(Composer\Installer\InstallationManager), '/home/globalmed...', true)
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(433): Composer\Installer->run()
+#7 phar:///opt/cpanel/composer/bin/composer/src/Composer/Command/RequireCommand.php(288): Composer\Command\RequireCommand->doUpdate(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput), Object(Composer\IO\ConsoleIO), Array, 'require', 'require-dev')
+#8 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Command/Command.php(245): Composer\Command\RequireCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(835): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(Composer\Command\RequireCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(336): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(117): Composer\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#15 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#16 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/src/Composer/Util/ProcessExecutor.php on line 483
+[25-Aug-2022 09:19:52 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:20:39 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:21:22 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:23:24 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:27:26 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:31:55 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:32:32 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952
+[25-Aug-2022 09:39:41 UTC] PHP Fatal error:  Uncaught ErrorException: proc_open(): Unable to create pipe Too many open files in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php:952
+Stack trace:
+#0 [internal function]: Composer\Util\ErrorHandler::handle(2, 'proc_open(): Un...', 'phar:///opt/cpa...', 952)
+#1 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(952): proc_open('stty -a | grep ...', Array, NULL, NULL, NULL, Array)
+#2 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(753): Symfony\Component\Console\Application->getSttyColumns()
+#3 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(714): Symfony\Component\Console\Application->getTerminalDimensions()
+#4 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(648): Symfony\Component\Console\Application->getTerminalWidth()
+#5 phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(ErrorException), Object(Symfony\Component\Console\Output\StreamOutput))
+#6 phar:///opt/cpanel/composer/bin/composer/src/Composer/Console/Application.php(131): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 phar:///opt/cpanel/composer/bin/composer/bin/composer(83): Composer\Console\Application->run()
+#8 /opt/cpanel/composer/bin/composer(29): require('phar:///opt/cpa...')
+#9 {main}
+  thrown in phar:///opt/cpanel/composer/bin/composer/vendor/symfony/console/Application.php on line 952

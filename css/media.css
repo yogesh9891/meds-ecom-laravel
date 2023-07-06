@@ -1,0 +1,542 @@
+@media (min-width:1180px) and (max-width:1920px) {
+	.wsmenu>.wsmenu-list>li.mdisplay{
+		display:none;
+	}
+}
+@media (min-width: 1200px){
+	.container {
+		max-width: 1240px;
+	}
+}
+@media(max-width: 1200px){
+	.main-tabs .nav-tabs li a.nav-link{
+		font-size:25px;
+	}
+}
+@media (min-width:1025px) and (max-width:1179px) {
+	.wsmenu>.wsmenu-list>li.mdisplay{
+		display:none;
+	}
+	.wsmenu > .wsmenu-list > li > a {
+		display:block;
+		padding:5px;
+	}
+	.logo {
+		max-width: 165px;
+	}
+	
+}
+
+@media(max-width: 1024px){
+	header {
+		min-height: 100%;
+	}
+	.menu-container{
+		margin-bottom:0;
+	}
+	.wsmenu>.wsmenu-list>li.mdisplay{
+		display:inherit
+	}
+	.right-part{
+		display:none;
+	}
+	.uppersection, .topsrtip,.bottom-marquee {
+		display:none;
+	}
+	
+	.banner-slide .slide-txt{
+		font-size: 2rem;
+		padding-right:30px;
+	}
+	.all-alphabetsContent .showAll li{
+		width:19%;
+	}
+	.wsmenu>.wsmenu-list>li>a{
+		background:transparent !important;
+		color:#666 !important;
+	}
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+	.banner-slide,.inner-page{
+		margin-top: 125px;
+	}
+	.inner-page{
+		margin-top: 125px;
+		padding-top: 20px
+	}
+	.breadcrumbs{
+		margin-top:0 !important;
+	}
+	.invoice-box .social-connect span{display:block;}
+	.invoice-box .social-connect{font-size:15px;text-align:left;}
+	.tablist .nav-tabs .nav-item{
+		margin-bottom:5px;
+	}
+}
+@media(max-width: 991px){
+	.medication-product-box{
+		width:100%;
+		padding-right:0px;
+		margin:10px 0;
+	}
+	.sidebar{
+		margin-top:50px;
+	}
+	.blog-item-text{
+		padding:10px;
+		text-align:left;
+	}
+	.blog-item.latest-blog h2{
+		font-size: 17px;
+		line-height: 22px;
+	}
+	.blog-item.latest-blog .blog-box{
+		margin-bottom:30px;
+	}
+}
+@media(max-width: 768px){
+	.font30 {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	.font20 {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+	.info-block{
+		padding:10px;
+	}
+
+	.flip-card-back{padding: 10px;}
+	.banner-slide .slide-txt{
+		font-size:1.5rem;
+		padding-right:30px;
+	}
+	.banner-search{
+		width:90%;
+		bottom:50px;
+	}
+	.main-tabs .nav-tabs li{
+		margin:0 10px
+	}
+	.main-tabs .nav-tabs li a.nav-link{
+		font-size:24px;
+		padding:10px 5px;
+	}
+	.promise-wrap{
+		justify-content: space-between;
+		align-items: normal;
+	}
+	.promise-box{
+		padding:0 5px;
+		width:33%;
+	}
+	.promise-box p{
+		font-size:13px;
+	}
+	.promise-box:nth-child(1) {
+		order: 1;
+	}
+	.promise-box:nth-child(3) {
+		order: 2;
+		margin-top: 60px;
+	}
+	.promise-box:nth-child(4) {
+		order: 3;
+	}
+	.promise-box:nth-child(2) {
+		order: 4;
+	}
+	.promise-box:nth-child(5) {
+		order: 5;
+	}
+	.promise-box.calen, .promise-box.microscope {
+		margin-top: -80px;
+	}
+}
+@media (max-width:767px) {
+	.inner-page{
+		margin-top: 125px;
+		padding-top: 20px
+	}
+	.breadcrumbs{margin-top:0px !important;}
+	.fill-credit-card-detail{margin-top:30px;}
+	.footer-link-wrap{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.all-alphabetsContent .showAll li{
+		width:24%;
+	}
+	
+	.heading-center{
+		text-align:center;
+	}
+	.heading-center span{
+		display:block;
+		margin:10px 0;
+	}
+	
+	.block-form_inner .btn span{display:block;}
+	.phone-block small{font-size:16px;}
+	.phone-block{font-size:18px;}
+	.phone-block a{font-size:28px;margin-top:20px;display:block;}
+	.block-form_title{font-size: 14px;}
+	.medication-product-heading{
+		position:static;
+	}
+}
+@media (max-width:600px) and (max-width:767px) {
+	
+}
+
+@media(max-width: 569px){
+	p,.blog-content ul li,.invoice-box p{
+		font-size:14px;
+	}
+	.banner-slide{
+		margin-top:156px;
+	}
+	.banner-slide .slide-txt{
+		top:40px;
+		padding:0 10px;
+		text-align:center;
+		left:0px;
+		z-index:5;
+	}
+	.banner-slide .slide-txt .banner-heading {
+		font-size: 19px;
+		font-weight: 700;
+		padding-top: 20px;
+		color:#fff !important;
+	}
+	.latestnews li .rightTxt p{
+		font-size:14px;
+	}
+	.mainsidebar{
+		margin-bottom:0px;
+	}
+	.latestnews li .leftImg{
+		margin-right: 10px;
+	}
+	.main-tabs .nav-tabs li{
+		margin:0 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.main-tabs .nav-tabs li a.nav-link{
+		font-size:25px;
+		padding:10px 0;
+	}
+	.block-form_inner .form-control{
+		font-size:14px;
+	}
+	.block-form_inner .form-group.row{
+		margin-bottom:0px;
+	}
+	.accordion-box .acc-heading span.acc-small-text{
+		padding-right:0px;
+	}
+	select.form-control.shipment-option{
+		font-size:14px;
+		width:165px;
+		padding:4px;
+	}
+	.accordion-box .acc-heading span{
+		font-size:14px;
+	}
+	.brand-vs-generic .all-alphabetsContent .showAll li{
+		width: 50%;
+		margin: 0 0 10px 0;
+	}
+	.block-form_inner .btn{font-size:14px;}
+	.topcartprocess{padding-top:5px;}
+	.footer-link-wrap {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.footer-link-wrap .footer-box{
+		margin-bottom:30px;
+	}
+	.footer-link-wrap .footer-box:last-child{
+		margin-bottom:0px;
+	}
+	.diseases-list [class*="col-"] {
+		max-width: 50%;
+	}
+	.health-box{
+		min-height:133px;
+	}
+	.disease-heading{
+		font-size: 13px;
+	}
+	.health-main .seeall{
+		font-size:13px;
+	}
+	.diseases-tabs{
+		padding-top:0px;
+		padding-bottom: 0;
+	}
+	.main-accordion{
+		padding:40px 0 20px 0;
+	}
+	.alphnumber{
+		padding-top:20px;
+	}
+	.atoztabbing-inner a{
+		font-size:18px;
+	}
+	.default-slider.owl-theme .owl-nav button {
+		position: static;
+		margin-top: 30px;
+	}
+	.latest-blog{
+		padding-bottom:0px;
+	}
+	.cta h3{
+		font-size:18px;
+	}
+	.cta p{
+		font-size:14px;
+	}
+	.footer-tags{
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 8px;
+	}
+	.webestbox{
+		text-align:center;
+		margin-bottom:30px;
+	}
+	.all-alphabetsContent .showAll li{
+		width:32%;
+	}
+	.slideoverlay{
+		display:block;
+	}
+	.slide {
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: 0% 0;
+		height: auto;
+		min-height: 282px;
+		background-position: 50% 0 !important;
+	}
+	.changepass .text-right{
+		text-align:left !important;
+	}
+	.cta .world-big{
+		font-size: 18px;
+		margin-bottom:15px;
+	}
+	.testimonialreviewList{
+		flex-wrap:wrap;
+	}
+	.trustpilot-review{
+		width:100%;
+	}
+	.google-review{
+		width:100%;
+		margin-top:20px;
+	}
+	
+	.product-data-table thead tr th, .product-data-table tbody tr td{
+		font-size: 14px;
+		vertical-align: middle;
+		padding:3px;
+	}
+	.product-data-table thead tr th{
+		font-size: 12px;
+	}
+	.product-box h3{
+		font-size:15px;
+	}
+	.tablist .nav-tabs .nav-link{
+		font-size: 0.8rem;
+	}
+	.heading-text{
+		font-size:18px;
+	}
+	.lg-btn {
+		width: 100%;
+	}
+	.dpnd{
+		display:none;
+	}
+	.m-view{
+		display:block;
+	}
+	.mainsidebar .sidebar-heading{
+		font-size:16px;
+	}
+	.main-footer-links{
+		text-align:center;
+	}
+	.modal-header{
+		display:block;
+	}
+	.modal-header img{
+		float:none !important;
+	}
+	.modal-header .feedbackheading{
+		position:static;
+	}
+	.modal-header .close{
+		position:absolute;
+		top:10px;
+		right:10px;
+	}
+	.banner-search .custom-search .form-control{
+		height: 40px;
+		font-size: 13px;
+	}
+	.invoice-box .social-connect{
+		text-align:center;
+		font-size:14px;
+	}
+	.addm{
+		margin-top:20px;
+	}
+	.orderdetails .table td, .orderdetails .table th {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	.twobtn,.twobtn .text-right{
+		text-align:center !important;
+		float:none !important;
+	}
+	.inner-page {
+		margin-top: 130px;
+		padding-top: 10px;
+	}
+	.promise-box.calen, .promise-box.microscope {
+		margin-top: -30px;
+	}
+	.shipping-option{
+		font-size:14px;
+	}
+	.orderdrugs{
+		margin-top:10px;
+	}
+	
+	.custom-search.carttypesearch i{
+		font-size:14px;
+	}
+	.twohalf {
+		width: 50%;
+	}
+	.cardpayment-option{
+		justify-content: start;
+	}
+	.selectoption{
+		display:block;
+		width:100%;
+	}
+	.tablist .nav-tabs .nav-item{
+		margin-bottom:10px;
+	}
+	.videoTestimonial .modal-dialog{
+		margin-top:70px;
+	}
+	.health-box .bottom-text{
+		position:relative;
+	}
+	.wsmenucontainer.fixed-nav .smllogo{
+		display:none;
+	}
+	.wsmenucontainer.fixed-nav .custom-search.mobilesearch{
+		width: 70%;
+		position: absolute;
+		top: 6px;
+		margin: 0px auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	span.smllogo-mob {
+		display: block;
+	}
+	.custom-search.carttypesearch{
+		width:100%;
+	}
+	.custom-search.carttypesearch.applypromo {
+		margin-bottom: 20px;
+	}
+	.scrolview{display:block;}
+	.fill-credit-card-detail p,.fill-credit-card-detail small.font16{font-size:14px;}
+	.invoice-box tr td, .invoice-box tr th {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.wordbreak{word-break: break-all;}
+	.history-table .table .thead-dark th, .history-table .table tbody tr td {
+		word-break: break-all;
+		padding: 5px;
+	}
+	.history-table .table .thead-dark th, table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td,.tabledetails table thead tr th,.tabledetails table tbody tr td {
+		font-size: 0.8rem;
+	}
+	.mainsidebar.mt-4.latestnews{margin-top:50px !important}
+	.contpra h2{font-size:28px;}
+	.review-list ul.reviewscroll.medreviewscroll .owl-item p {
+		font-size: 14px;
+	}
+	.fielsmend{font-size:14px;}
+	.breadcrumbs ul li{font-size: 14px;}
+	.history-table .table .thead-dark th, .history-table .table tbody tr td{
+		word-break: break-all;
+		padding: 5px;
+	}
+	.tabledetails table thead tr th,.tabledetails table tbody tr td {
+		padding: 5px;
+	}
+	.countCart button{
+		padding:2px;
+	}
+	.shiptopdetails{
+		padding-left:0;
+		padding-right:0;
+	}
+	.history-table span {
+		width: auto;
+		display: block;
+		padding: 0;
+	}
+	.invoice-box{
+		padding:8px;
+	}
+	div.dataTables_wrapper div.dataTables_info{
+		text-align: right;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.orderprocess-list{
+		display:block;
+	}
+	.owl-carousel.owl-loaded.orderprocess{
+		display:none;
+	}
+	.sidebagap{
+		margin-top:50px;
+	}
+}
+
+@media (max-width:480px) {
+	.all-alphabetsContent .showAll li{
+		width:49%;
+	}
+	.half-line{
+		width:50%;
+	}
+	.select-medicine-tabs a{
+		width:100%;
+	}
+	.orderdetails .table td, .orderdetails .table th {
+		font-size: 12px;
+		padding:3px !important;
+	}
+	
+}
+@media (max-width:320px){
+	.promise-box.calen, .promise-box.microscope {
+		margin-top: 0px;
+	}
+}
